@@ -79,7 +79,7 @@ order by total desc;
 -- Entre as avaliadas (Resolvida + Não Resolvida): 25,44% resolvida (vs. 36,79% geral — financeiro resolve significativamente menos).
 
 
--- 5. CAUSA RAIZ: motivo das reclamações no financeiro
+-- 6. CAUSA RAIZ: motivo das reclamações no financeiro
 select 
     grupo_problema,
     count(*) as total
