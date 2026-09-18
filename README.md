@@ -9,7 +9,17 @@ Análise exploratória de reclamações registradas no **Consumidor.gov.br**, co
 
 O projeto utiliza **Python (Pandas)** para preparação dos dados e **PostgreSQL + SQL** para armazenamento e análise.
 
-> 📌 **Status:** análise em SQL concluída | Dashboard em Power BI em desenvolvimento
+> 📌 **Status:** análise em SQL concluída | Dashboard em Power BI concluído
+
+---
+
+## 📊 Dashboard
+
+![Dashboard Power BI](images/dashboard_consumidor_gov.png)
+
+O dashboard interativo foi construído no Power BI, permitindo comparar o segmento financeiro com demais segmentos em volume, tempo de resposta, taxa de resolução e categoria de problema.
+
+- **Nota:** Optei por não usar o campo nome fantasia para comparação entre empresa, pois trata-se de um nome comercial informal, o que o torna menos confiável como identificador para esta análise. A comparação foi conduzida no nível de Segmento de Mercado.
 
 ---
 
@@ -42,7 +52,7 @@ Essas perguntas orientaram as consultas SQL, evitando uma análise baseada apena
 | **Python (Pandas)** | Tratamento e preparação dos dados                             |
 | **PostgreSQL**      | Armazenamento dos dados                                       |
 | **SQL**             | Exploração, agregação e análise dos dados                     |
-| **Power BI**        | Visualização e dashboard — *em desenvolvimento*               |
+| **Power BI**        | Visualização e dashboard                                      |
 
 ---
 
@@ -51,7 +61,7 @@ Essas perguntas orientaram as consultas SQL, evitando uma análise baseada apena
 1. **Coleta:** dados obtidos da base pública do Consumidor.gov.br.
 2. **Preparação:** tratamento com Pandas — leitura, checagem de tipos, tratamento de nulos e padronização das colunas ([`notebooks/preparacao_dados.ipynb`](notebooks/preparacao_dados.ipynb)).
 3. **Armazenamento:** carga no PostgreSQL via `\copy` ([`sql/criacao_tabela.sql`](sql/criacao_tabela.sql)).
-4. **Análise exploratória:** consultas SQL para investigar volume, participação por segmento, taxa de resposta, índice de resolução, tempo médio de resposta e avaliação dos consumidores ([`sql/analytics_consumidor_gov.sql`](sql/analytics_consumidor_gov.sql)).
+4. **Análise exploratória:** consultas SQL para investigar volume, participação por segmento, taxa de resposta, índice de resolução, tempo médio de resposta e avaliação dos consumidores ([`sql/analise_consumidor_gov.sql`](sql/analise_consumidor_gov.sql)).
 
 ---
 
@@ -78,7 +88,7 @@ jupyter notebook notebooks/preparacao_dados.ipynb
 psql -U seu_usuario -d seu_banco -f sql/criacao_tabela.sql
 
 # 6. Rode as análises
-psql -U seu_usuario -d seu_banco -f sql/analytics_consumidor_gov.sql
+psql -U seu_usuario -d seu_banco -f sql/analise_consumidor_gov.sql
 
 ```
 
@@ -86,7 +96,7 @@ psql -U seu_usuario -d seu_banco -f sql/analytics_consumidor_gov.sql
 
 ---
 
-# 🔎 Principais resultados
+## 🔎 Principais resultados
 
 ## 1. Volume de reclamações
 
@@ -142,7 +152,7 @@ O financeiro tem menos reclamações avaliadas e, entre as avaliadas, resolve pr
 
 ---
 
-# 🧠 Interpretação
+## 🧠 Interpretação
 
 O segmento financeiro concentra **41,44% do volume total**, mas seu **tempo e taxa de resposta são semelhantes — ou até levemente melhores — que a média geral**. A diferença aparece depois da resposta: menor efetividade na resolução (25,44% vs. 36,79%) e pior percepção do consumidor (nota 2,04 vs. 2,36).
 
@@ -152,13 +162,15 @@ A concentração de ~72% das reclamações do segmento em "Cobrança / Contesta�
 
 ---
 
-# 📂 Estrutura do projeto
+## 📂 Estrutura do projeto
 
 ```text
-consumidor-gov-analise/
-│
+consumidor-gov-analise/  
 ├── data/
 │   └── dados_consumidor.gov.csv
+│
+├── images/
+│   └── dashboard_consumidor_gov.png
 │
 ├── notebooks/
 │   └── preparacao_dados.ipynb
@@ -173,22 +185,21 @@ consumidor-gov-analise/
 
 ---
 
-# 🚀 Próximos passos
+## 🚀 Próximos passos
 
-* [ ] Construção do dashboard no Power BI
-* [ ] Indicadores interativos
-* [ ] Análise temporal das reclamações
-* [ ] Comparação entre empresas
-* [ ] Análise aprofundada das avaliações
-* [ ] Identificação de padrões por categoria de problema
+* [  ] Automatizar coleta
+* [  ] Conectar VS Code ao PostgreSQL
+* [  ] Criar funções/views no Postgresql
+* [  ] Conectar PowerBI ao Postgresql
+
 
 ---
 
-# 📌 Conclusão
+## 📌 Conclusão
 
 O projeto percorre um fluxo completo de análise de dados — preparação, armazenamento em PostgreSQL e exploração via SQL — sobre uma base pública de grande volume. Mais do que estatísticas descritivas, buscou responder perguntas de negócio e identificar diferenças reais de desempenho entre segmentos.
 
-O principal achado foi o contraste entre volume, resposta e efetividade da resolução no segmento financeiro. O projeto seguirá com a construção do dashboard em Power BI.
+O principal achado foi o contraste entre volume, resposta e efetividade da resolução no segmento financeiro. O projeto conta com dashboard interativo em Power BI, disponivel na seção acima.
 
 ---
 
