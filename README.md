@@ -60,8 +60,10 @@ Essas perguntas orientaram as consultas SQL, evitando uma análise baseada apena
 
 1. **Coleta:** dados obtidos da base pública do Consumidor.gov.br.
 2. **Preparação:** tratamento com Pandas — leitura, checagem de tipos, tratamento de nulos e padronização das colunas ([`notebooks/preparacao_dados.ipynb`](notebooks/preparacao_dados.ipynb)).
-3. **Armazenamento:** carga no PostgreSQL via `\copy` ([`sql/criacao_tabela.sql`](sql/criacao_tabela.sql)).
-4. **Análise exploratória:** consultas SQL para investigar volume, participação por segmento, taxa de resposta, índice de resolução, tempo médio de resposta e avaliação dos consumidores ([`sql/analise_consumidor_gov.sql`](sql/analise_consumidor_gov.sql)).
+3. **Armazenamento:** carga no PostgreSQL via `\copy` 
+([`sql/criacao_tabela.sql`](sql/criacao_tabela.sql)).
+4. **Conexão:** validação da carga e consulta via VS Code, usando SQLAlchemy e psycopg2(ver seção 6 no notebook).
+5. **Análise exploratória:** consultas SQL para investigar volume, participação por segmento, taxa de resposta, índice de resolução, tempo médio de resposta e avaliação dos consumidores ([`sql/analise_consumidor_gov.sql`](sql/analise_consumidor_gov.sql)).
 
 ---
 
@@ -188,9 +190,9 @@ consumidor-gov-analise/
 ## 🚀 Próximos passos
 
 * [  ] Automatizar coleta
-* [  ] Conectar VS Code ao PostgreSQL
+* [ x ] Conectar VS Code ao PostgreSQL
 * [  ] Criar funções/views no Postgresql
-* [  ] Conectar PowerBI ao Postgresql
+* [ x ] Conectar PowerBI ao Postgresql
 
 
 ---
