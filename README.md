@@ -177,7 +177,7 @@ O financeiro tem menos reclamações avaliadas e, entre as avaliadas, resolve pr
 
 O segmento financeiro concentra **41,44% do volume total**, mas seu **tempo e taxa de resposta são semelhantes aos dos demais segmentos** (o tempo é até um pouco menor). A diferença aparece depois da resposta: menor efetividade na resolução (25,44% vs. 42,67%) e pior percepção do consumidor (nota 2,04 vs. 2,52).
 
-> **Principal insight:** o segmento financeiro responde em ritmo e proporção semelhantes aos demais segmentos (e até um pouco mais rápido), mas apresenta menor efetividade na resolução e pior percepção dos consumidores. O problema não está na velocidade de resposta, mas na qualidade da solução oferecida.
+> **Principal insight:** o segmento financeiro responde em ritmo e proporção semelhantes aos demais segmentos (e até um pouco mais rápido), mas apresenta menor efetividade na resolução e pior percepção dos consumidores. Os dados sugerem que a diferença aparece depois da resposta, e não na velocidade de atendimento.
 
 > **Limitação:** a nota e a resolução consideram apenas as reclamações avaliadas pelo consumidor (cerca de 31% da base: 25,8% no financeiro e 35,3% nos demais segmentos). Os resultados refletem a percepção de quem avaliou. Além disso, os "demais segmentos" reúnem 44 segmentos distintos, ponderados pelo volume de cada um, então a comparação é com a média deles e não com cada um individualmente.
 
